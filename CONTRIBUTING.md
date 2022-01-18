@@ -1,5 +1,4 @@
 # Contributing guide
-
 ## /doc
 This is what should be
 
