@@ -1,9 +1,7 @@
-def prints()
+birth_year = input("Enter your birth year: ")
 
 
-
-    print("sample python program    ")
-
+age = 2022 - int(birth_year)
 
 
-prints()
+print(age)
