@@ -1,0 +1,17 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  
+  env-python:
+    desc: Installs Python 3.9
+    cmds:
+      - pyenv install 3.9
+      
+  poetry-dependencies:
+    desc:Install dependencies managed by poetry
+    cmds:
+      - poetry install
+      - poetry run black
+     
