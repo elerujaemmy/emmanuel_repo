@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install
+      - git clone https://github.com/pyenv-win.git"$HOME/.pyenv"
       - pyenv install 
       - poetry install
   pre_build:
