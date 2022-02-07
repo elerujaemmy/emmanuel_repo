@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: latest
+      python: 3.9
+    commands:
+      - poetry install
+      - poetry run
+  pre_build:
+    commands:
+      - poetry run pytest
+  build:
+    commands:
+      - pyenv run python commands/
+      
+artifacts:
+  files:
+    - packaged.yaml
+  discard-paths: yes
