@@ -6,6 +6,7 @@ phases:
       docker: latest
       python: 3.9
     commands:
+      - pyenv install 
       - poetry install
   pre_build:
     commands:
