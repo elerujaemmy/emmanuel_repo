@@ -2,10 +2,8 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      docker: latest
-      python: 3.9
     commands:
+      - brew install
       - pyenv install 
       - poetry install
   pre_build:
@@ -13,8 +11,7 @@ phases:
       - poetry run pytest
   build:
     commands:
-      - pyenv run python commands/
-      
+      - poetry build
 artifacts:
   files:
     - packaged.yaml
