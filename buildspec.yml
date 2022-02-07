@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - brew install
+      - pip install
       - pyenv install 
       - poetry install
   pre_build:
