@@ -7,7 +7,6 @@ phases:
       python: 3.9
     commands:
       - poetry install
-      - poetry run black
   pre_build:
     commands:
       - poetry run pytest
