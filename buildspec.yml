@@ -4,7 +4,7 @@ phases:
   install:
     runtime-versions:
       python: 3.9
-      poetry: latest
+      docker: latest
     commands:
       - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
       - source $HOME/.poetry/env
