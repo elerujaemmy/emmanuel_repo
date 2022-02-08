@@ -1,14 +1,10 @@
 version: 0.2
 
-env:
-  parameter-store:
-    PYPI_USERNAME: beebee_4real@yahoo.co.uk
-    PYPI_USERNAME: Emmanuel10
-    
 phases:
   install:
     runtime-versions:
       python: latest
+      poetry: latest
     commands:
       - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
       - source $HOME/.poetry/env
