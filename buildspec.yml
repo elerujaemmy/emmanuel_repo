@@ -3,8 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install pyenv
-      - pyenv install python 3.9
+      - pip install pipx
+      - pipx install black
   pre_build:
     commands:
       - pip install
