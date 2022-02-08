@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    PYPI_USERNAME: /pypi/username
-    PYPI_USERNAME: /pypi/password
+    PYPI_USERNAME: elerujaemmy@yahoo.com
+    PYPI_USERNAME: Oluwatomiwa1$
     
 phases:
   install:
