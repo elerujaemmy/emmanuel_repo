@@ -1,5 +1,10 @@
 version: 0.2
 
+env:
+  parameter-store:
+    PYPI_USERNAME: /pypi/username
+    PYPI_USERNAME: /pypi/password
+    
 phases:
   install:
     runtime-versions:
@@ -8,6 +13,7 @@ phases:
       - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
       - source $HOME/.poetry/env
       - poetry install
+      
   build:
     commands:
       - poetry build
