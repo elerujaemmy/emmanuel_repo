@@ -13,3 +13,8 @@ phases:
   build:
     commands:
       - poetry build
+      
+artifacts:
+  files:
+    - '*'
+  discard-paths: yes
