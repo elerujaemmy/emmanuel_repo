@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - pip install
+      - pip install pyenv
+      - pyenv install python 3.9
   pre_build:
     commands:
       - pip install
