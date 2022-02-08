@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    PYPI_USERNAME: elerujaemmy@yahoo.com
-    PYPI_USERNAME: Oluwatomiwa1$
+    PYPI_USERNAME: beebee_4real@yahoo.co.uk
+    PYPI_USERNAME: Emmanuel10
     
 phases:
   install:
