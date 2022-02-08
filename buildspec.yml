@@ -15,6 +15,7 @@ phases:
       - poetry build
       
 artifacts:
+
   files:
     - '*'
   discard-paths: yes
