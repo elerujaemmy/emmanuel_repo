@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - poetry add black
+      - poetry build
   pre_build:
     commands:
       - poetry run pytest
