@@ -2,12 +2,12 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: latest
     commands:
-      - pip install pipx
-      - pipx install black
-  pre_build:
-    commands:
-      - pip install
+      - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+      - source $HOME/.poetry/env
+      - poetry install
   build:
     commands:
-      - pip install
+      - poetry build
