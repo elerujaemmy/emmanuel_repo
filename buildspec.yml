@@ -3,14 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - poetry build
+      - pip install
   pre_build:
     commands:
-      - poetry run pytest
+      - pip install
   build:
     commands:
-      - poetry build
-artifacts:
-  files:
-    - packaged.yaml
-  discard-paths: yes
+      - pip install
