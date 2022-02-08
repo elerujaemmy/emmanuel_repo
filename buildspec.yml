@@ -3,9 +3,6 @@ version: 0.2
 phases:
   install:
     commands:
-      - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-      - brew install pyenv
-      - pyenv install poetry
       - poetry install
   pre_build:
     commands:
