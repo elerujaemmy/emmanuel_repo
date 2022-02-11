@@ -10,6 +10,40 @@ import json
 from botocore.vendored import requests
 
 
+import boto3
+sso_admin = boto3.client('sso-admin')
+
+#get the Amazon Resource Name(ARN) of the AWS SSO instance, which you will need later in the process when you create and assign permission sets to AWS accounts and users or groups
+
+list_instance_response = sso_admin.list_instances(
+    MaxResults=1,
+    NextToken='Null'
+)
+
+#create permission sets
+#creates a permission set within a specified sso instance
+
+# {
+#     'Instances': [
+#         {
+#             'InstanceArn': 'string',
+#             'IdentityStoreId': 'string'
+#         },
+#     ],
+#     'NextToken': 'string'
+# }
+list_of_instances = list_instance_response['Instances']
+first_instance = list_of_instances[0]
+first_instance_arn = first_instance['InstanceArn']
+
+permission_list_response = sso_admin.list_permission_sets(
+    InstanceArn=first_instance_arn,
+    MaxResults=1
+)
+
+print(permission_list_response)
+
+
 def get_client(service):
   client = boto3.client(service)
   return client
