@@ -1,0 +1,21 @@
+---
+
+AWSTemplateFormatVersion: "2010-09-09"
+
+Project:
+  Type: AWS::Codebuild::Project
+  Properties:
+    Name: macrocosm
+    Description: Account creation in macrocosm
+    ServiceRole: arn:aws:organizations::aws:policy/service_control_policy/p-FullAWSAccess
+    Artifacts:
+      Type: NO_ARTIFACTS
+    Environment:
+      Type: LINUX_CONTAINER
+      ComputeType:
+      Image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
+    Source:
+      Auth:
+        Type:personal_access_token
+      Location:
+      Type: GITHUB
